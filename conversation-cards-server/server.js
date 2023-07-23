@@ -34,15 +34,6 @@ app.get('/card', async (req, res) => {
   }
 });
 
-// app.put('/card/:id/next', async (req, res) => {
-//   const { id } = req.params;
-//   const result = await pool.query(
-//     'UPDATE holstee SET last_shown = NOW() WHERE id = $1',
-//     [id]
-//   );
-//   res.json(result.rowCount > 0);
-// });
-
 app.put('/card/:id/answer', async (req, res) => {
   const { id } = req.params;
   const result = await pool.query(
