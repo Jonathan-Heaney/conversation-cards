@@ -55,3 +55,9 @@ app.put('/card/:id/answer', async (req, res) => {
 app.listen(3001, () => {
   console.log('Server is running on port 3001');
 });
+
+app.delete('/card/:id', async (req, res) => {
+  const { id } = req.params;
+  const result = await pool.query('DELETE FROM holstee WHERE id = $1', [id]);
+  res.json(result.rowCount > 0);
+});

@@ -97,11 +97,18 @@ function App() {
     fetchCard();
   }, []);
 
-  const handleSnooze = async () => {
-    if (card) {
-      await axios.put(`http://localhost:3001/card/${card.id}/snooze`);
-      fetchCard();
-    }
+  const handleDelete = async () => {
+    await axios
+      .delete(`http://localhost:3001/card/${card.id}`)
+      .then((response) => {
+        if (response.data) {
+          console.log(`Card with id ${card.id} deleted successfully.`);
+          handleNext(); // Fetch the next card
+        } else {
+          console.error(`Failed to delete card with id ${card.id}.`);
+        }
+      })
+      .catch((err) => console.error(err));
   };
 
   const handleMarkAnswered = async () => {
@@ -123,7 +130,7 @@ function App() {
     <div className="App">
       <Card
         card={card}
-        onSnooze={handleSnooze}
+        onDelete={handleDelete}
         onMarkAnswered={handleMarkAnswered}
         onNext={handleNext}
       />

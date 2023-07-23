@@ -3,14 +3,14 @@
 import React from 'react';
 import './Card.css';
 
-function Card({ card, onSnooze, onMarkAnswered, onNext }) {
+function Card({ card, onDelete, onMarkAnswered, onNext }) {
   return (
     <div className="card">
       <h2>{card.question}</h2>
       <p>Category: {card.category}</p>
       <div className="buttons">
-        <button className="snooze" onClick={() => onSnooze(card.id)}>
-          Snooze
+        <button className="delete" onClick={() => onDelete(card.id)}>
+          Delete
         </button>
         <button
           className="mark-answered"

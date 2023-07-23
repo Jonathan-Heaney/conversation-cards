@@ -49,28 +49,28 @@ body {
   text-align: center;
 }
 
-.snooze {
-  background-color: hsl(211, 46%, 36%);
+.delete {
+  background-color: hsl(0, 72%, 51%);
 }
 
-.snooze:hover {
-  background-color: hsl(211, 66%, 36%);
+.delete:hover {
+  background-color: hsl(0, 82%, 51%);
 }
 
 .mark-answered {
-  background-color: hsl(33, 96%, 56%);
+  background-color: hsl(221, 83%, 53%);
 }
 
 .mark-answered:hover {
-  background-color: hsl(30, 96%, 56%);
+  background-color: hsl(221, 100%, 53%);
 }
 
 .next {
-  background-color: hsl(173, 80%, 40%);
+  background-color: hsl(161, 94%, 30%);
 }
 
 .next:hover {
-  background-color: hsl(173, 70%, 40%);
+  background-color: hsl(161, 84%, 30%);
 }
 
 @media (max-width: 600px) {
