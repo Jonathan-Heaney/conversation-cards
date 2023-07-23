@@ -1,53 +1,94 @@
-/* styles.css */
-
 body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  min-height: 100vh;
   background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
 }
 
 .card {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 400px;
-  max-width: 90%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  margin: 20px;
 }
 
 .card h2 {
-  margin-top: 0;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card button {
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
   cursor: pointer;
-  margin-right: 10px;
-  margin-top: 20px;
+  text-align: center;
 }
 
-.card button:hover {
-  opacity: 0.8;
+.snooze {
+  background-color: hsl(211, 46%, 36%);
 }
 
-.card button:nth-child(1) {
-  background-color: #f94144;
-  color: white;
+.snooze:hover {
+  background-color: hsl(211, 66%, 36%);
 }
 
-.card button:nth-child(2) {
-  background-color: #90be6d;
-  color: white;
+.mark-answered {
+  background-color: hsl(33, 96%, 56%);
 }
 
-.card button:nth-child(3) {
-  background-color: #577590;
-  color: white;
+.mark-answered:hover {
+  background-color: hsl(30, 96%, 56%);
+}
+
+.next {
+  background-color: hsl(173, 80%, 40%);
+}
+
+.next:hover {
+  background-color: hsl(173, 70%, 40%);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .card button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }

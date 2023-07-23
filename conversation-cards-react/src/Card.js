@@ -8,9 +8,20 @@ function Card({ card, onSnooze, onMarkAnswered, onNext }) {
     <div className="card">
       <h2>{card.question}</h2>
       <p>Category: {card.category}</p>
-      <button onClick={() => onSnooze(card.id)}>Snooze</button>
-      <button onClick={() => onMarkAnswered(card.id)}>Mark as Answered</button>
-      <button onClick={onNext}>Next</button>
+      <div className="buttons">
+        <button className="snooze" onClick={() => onSnooze(card.id)}>
+          Snooze
+        </button>
+        <button
+          className="mark-answered"
+          onClick={() => onMarkAnswered(card.id)}
+        >
+          Mark as Answered
+        </button>
+        <button className="next" onClick={onNext}>
+          Next
+        </button>
+      </div>
     </div>
   );
 }
